@@ -1,0 +1,29 @@
+group 'com.ekiras'
+version '1.0-RELEASE'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+allprojects{
+    sourceCompatibility = 1.8
+}
+
+subprojects{
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+    }
+
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
